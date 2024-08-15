@@ -9,12 +9,24 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="pl-2 list-disc">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
+        <li>HTML</li>
+        <li>CSS</li>
         <li>JavaScript</li>
-        <li>React</li>
+        <li>C</li>
+        <li>Java</li>
+        <li>Tailwind CSS</li>
+        <li>ReactJS</li>
+        <li>NextJS</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Technologies and Tools",
+    id: "technologies",
+    content: (
+      <ul className="pl-2 list-disc">
+        <li>AdobeXD</li>
+        <li>Sabaragamuwa University of Sri Lanka</li>
       </ul>
     ),
   },
@@ -23,8 +35,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="pl-2 list-disc">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>Bachelor's degree in Computer Science</li>
+        <li>Sabaragamuwa University of Sri Lanka</li>
       </ul>
     ),
   },
@@ -33,8 +45,10 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="pl-2 list-disc">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Code With WIE</li>
+        <li>Pioneers</li>
+        <li>Idealize</li>
+        <li>Mora UXplore 1.0</li>
       </ul>
     ),
   },
@@ -57,34 +71,34 @@ const AboutSection = () => {
         <div className="flex flex-col h-full mt-4 text-left md:mt-0">
           <h2 className="mb-4 text-4xl font-bold text-white">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          I am a UI UX designer and a frontend web developer. I am very passionate about UI/UX design, which 
+          has led me to work on several projects, like group projects as 
+          well as individual projects. Through this experience, I was able  
+          to develop skills in user research, wireframing, and prototyping. 
+          I am proficient with tools like Figma, Adobe XD, and Sketch, and 
+          I have a good understanding of front-end development, including 
+          HTML, CSS, and JavaScript. I am dedicated to continuous learning 
+          and best practices. I focus on designing with the user in mind 
+          and making sure my solutions are both useful and enjoyable. 
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Skills{" "}
+              Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
-              Education{" "}
+              Education
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              {" "}
-              Certifications{" "}
+              Certifications
             </TabButton>
           </div>
           <div className="mt-8">
