@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
-    <div className="rounded-xl overflow-hidden bg-[#46032e]">
+    <div className="rounded-xl overflow-hidden bg-[#46032e] group"> {/* Added group class here */}
       <div className="relative h-52 md:h-72">
         <img
           src={imgUrl}
