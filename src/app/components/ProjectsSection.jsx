@@ -73,7 +73,7 @@ const projectsData = [
     title: "FitNourish",
     description: "A nutritious app tailored for gym enthusiasts",
     image: "/images/projects/nutri.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Mobile"],
     gitUrl: "https://github.com/username/fitnourish",
     previewUrl: "https://www.figma.com/file/I2DK1n2c9c7ZmqdWdNMM5X/FitNourish?node-id=0-1&t=n8v1HwfFgvqfu4s0-1",
   },
