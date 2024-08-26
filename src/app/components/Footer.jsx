@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -27,7 +29,7 @@ const Footer = () => {
             </a>
           </p>
           <p className="text-slate-400">
-            <a href="tel:+1234567890" className="hover:underline">
+            <a href="tel:+94704253594" className="hover:underline">
               +94704253594
             </a>
           </p>
@@ -41,23 +43,23 @@ const Footer = () => {
           <h3 className="mb-3 text-lg font-semibold">Follow Us</h3>
           <ul className="flex justify-center space-x-6 md:justify-start">
             <li>
-              <a href="#" className="text-slate-400 hover:text-white">
-                Facebook
+              <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
+                <FontAwesomeIcon icon={faFacebook} className="w-6 h-6" />
               </a>
             </li>
             <li>
-              <a href="#" className="text-slate-400 hover:text-white">
-                Twitter
+              <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
+                <FontAwesomeIcon icon={faTwitter} className="w-6 h-6" />
               </a>
             </li>
             <li>
-              <a href="#" className="text-slate-400 hover:text-white">
-                Instagram
+              <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
+                <FontAwesomeIcon icon={faInstagram} className="w-6 h-6" />
               </a>
             </li>
             <li>
-              <a href="#" className="text-slate-400 hover:text-white">
-                LinkedIn
+              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
+                <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
               </a>
             </li>
           </ul>

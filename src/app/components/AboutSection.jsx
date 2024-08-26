@@ -2,15 +2,17 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSchool, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 const SKILL_DATA = [
   { name: "HTML", percentage: 90 },
   { name: "CSS", percentage: 85 },
-  { name: "Tailwind", percentage: 80 },
-  { name: "Bootstrap", percentage: 75 },
-  { name: "JavaScript", percentage: 80 },
-  { name: "React", percentage: 85 },
-  { name: "Next.js", percentage: 75 },
+  { name: "Tailwind", percentage: 70 },
+  { name: "Bootstrap", percentage: 78 },
+  { name: "JavaScript", percentage: 76 },
+  { name: "React", percentage: 65 },
+  { name: "Next.js", percentage: 50 },
 ];
 
 const TAB_DATA = [
@@ -22,7 +24,7 @@ const TAB_DATA = [
         {SKILL_DATA.map((skill, index) => (
           <div key={index} className="flex items-center">
             <div className="w-24 font-semibold">{skill.name}</div>
-            <div className="w-full h-6 overflow-hidden bg-gray-700 rounded-full">
+            <div className="w-full h-6 ml-2 overflow-hidden bg-white rounded-full">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-pink-400 to-purple-500"
                 style={{ width: `${skill.percentage}%` }}
@@ -47,22 +49,61 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="pl-2 list-disc">
-        <li>Sujatha Vidyalaya Matara</li>
-        <li>BSc.Honours Degree in Computing and Information Systems</li>
-      </ul>
+      <div className="space-y-4">
+        <div className="flex items-center">
+          <FontAwesomeIcon icon={faSchool} className="w-6 h-6 mr-2 text-purple-500" />
+          <div>
+            <div className="font-semibold">Sujatha Vidyalaya Matara</div>
+            <div className="text-sm">Secondary Education</div>
+          </div>
+        </div>
+        <div className="flex items-center">
+          <FontAwesomeIcon icon={faGraduationCap} className="w-6 h-6 mr-2 text-purple-500" />
+          <div>
+            <div className="font-semibold">BSc. Honours Degree in Computing and Information Systems</div>
+            <div className="text-sm">Sabaragamuwa University of Sri Lanka</div>
+          </div>
+        </div>
+      </div>
     ),
   },
   {
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="pl-2 list-disc">
-        <li>Code With WIE</li>
-        <li>Pioneers</li>
-        <li>Idealize</li>
-        <li>Mora UXplore 1.0</li>
-      </ul>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col items-center">
+          <Image src="/images/xp.png" alt="Certification 1" width={200} height={150} className="mb-2" />
+          <div className="text-center">
+            <div className="font-semibold">Code With WIE</div>
+            <div className="text-sm">Description or details about the Code With WIE certification.</div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <Image src="/images/xp.png" alt="Certification 2" width={200} height={150} className="mb-2" />
+          <div className="text-center">
+            <div className="font-semibold">Pioneers</div>
+            <div className="text-sm">Description or details about the Pioneers certification.</div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <Image src="/images/xp.png" alt="Certification 3" width={200} height={150} className="mb-2" />
+          <div className="text-center">
+            <div className="font-semibold">Idealize</div>
+            <div className="text-sm">Description or details about the Idealize certification.</div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <Image src="/images/xp.png" alt="Certification 4" width={200} height={150} className="mb-2" />
+          <div className="text-center">
+            <div className="font-semibold">Mora UXplore 1.0</div>
+            <div className="text-sm">Description or details about the Mora UXplore 1.0 certification.</div>
+          </div>
+        </div>
+      </div>
     ),
   },
 ];
