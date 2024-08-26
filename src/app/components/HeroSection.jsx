@@ -26,7 +26,7 @@ const HeroSection = () => {
                 1000,
                 "Web Developer",
                 1000,
-                "UI/UX Designer",
+                "UI/UX Engineer",
                 1000,
               ]}
               wrapper="span"
@@ -35,7 +35,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Passionate about design and enhancing user experiences, I create intuitive and visually compelling interfaces.
+            Passionate about designing and enhancing user experiences, I create intuitive and visually compelling interfaces.
           </p>
           
           <div>
@@ -47,7 +47,10 @@ const HeroSection = () => {
             </Link>
             
             <Link
-              href="/"
+              href="/UI UX Intern- Kanchana Hewamadduma.pdf" // Link to your uploaded CV
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Kanchana_Hewamadduma_CV.pdf" // This triggers the download
               className="inline-block w-full px-1 py-1 mt-3 text-black rounded-full sm:w-fit bg-gradient-to-br from-primary-900 to-secondary-500 hover:bg-slate-900"
             >
               <span className="block bg-[#ffffff] hover:bg-slate-800 rounded-full px-5 py-2 font-bold">
@@ -68,7 +71,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#962265] to-[#c24dc2] blur-[100px] rounded-full"></div>
             <div className="relative w-full h-full rounded-full">
               <Image
-                src="/images/hero'''image - Copy.png"
+                src="/images/propic2.png"
                 alt="hero image"
                 className="absolute transform -translate-y-1/2 -translate-x-1/4 top-1/2 left-1/4"
                 width={500}
