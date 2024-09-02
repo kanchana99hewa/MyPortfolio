@@ -9,14 +9,14 @@ const Footer = () => {
         {/* Logo Section */}
         <div className="text-center md:text-left">
           <span className="text-3xl font-bold">LOGO</span>
-          <p className="mt-2 text-slate-600">© 2024 All rights reserved.</p>
+          
         </div>
 
         {/* About Us Section */}
         <div className="text-center md:text-left">
           <h3 className="mb-3 text-lg font-semibold">About Us</h3>
           <p className="max-w-xs text-slate-400">
-            I am a UI UX designer and a frontend web developer
+            I am a UI UX designer and a Software Engineer
           </p>
         </div>
 

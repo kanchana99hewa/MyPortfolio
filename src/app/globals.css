@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.text-gradient {
+  background: linear-gradient(90deg, rgb(243, 72, 220) 0%, rgb(206, 76, 173) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

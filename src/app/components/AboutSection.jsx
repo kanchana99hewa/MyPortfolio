@@ -1,5 +1,5 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,7 +26,7 @@ const TAB_DATA = [
             <div className="w-24 font-semibold">{skill.name}</div>
             <div className="w-full h-6 ml-2 overflow-hidden bg-white rounded-full">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-pink-400 to-purple-500"
+                className="h-full rounded-full bg-gradient-to-r from-pink-500 to-purple-700"
                 style={{ width: `${skill.percentage}%` }}
               ></div>
             </div>
@@ -57,6 +57,7 @@ const TAB_DATA = [
             <div className="text-sm">Secondary Education</div>
           </div>
         </div>
+        
         <div className="flex items-center">
           <FontAwesomeIcon icon={faGraduationCap} className="w-6 h-6 mr-2 text-purple-500" />
           <div>
@@ -64,43 +65,52 @@ const TAB_DATA = [
             <div className="text-sm">Sabaragamuwa University of Sri Lanka</div>
           </div>
         </div>
+        
+        <div className="flex items-center">
+          <FontAwesomeIcon icon={faSchool} className="w-6 h-6 mr-2 text-purple-500" />
+          <div>
+            <div className="font-semibold">SITEC (Southern Information Technology Education Center)</div>
+            <div className="text-sm">Completed 4 months course in Python</div>
+          </div>
+        </div>
+        
       </div>
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Achievements",
+    id: "achievements",
     content: (
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
         <div className="flex flex-col items-center">
-          <Image src="/images/xp.png" alt="Certification 1" width={200} height={150} className="mb-2" />
+          <Image src="/images/code.jpeg" alt="Achievement 1" width={200} height={150} className="mb-2" />
           <div className="text-center">
             <div className="font-semibold">Code With WIE</div>
-            <div className="text-sm">Description or details about the Code With WIE certification.</div>
+            <div className="text-sm">Finalists</div>
           </div>
         </div>
 
         <div className="flex flex-col items-center">
-          <Image src="/images/xp.png" alt="Certification 2" width={200} height={150} className="mb-2" />
+          <Image src="/images/pio.jpeg" alt="Achievement 2" width={200} height={150} className="mb-2" />
           <div className="text-center">
             <div className="font-semibold">Pioneers</div>
-            <div className="text-sm">Description or details about the Pioneers certification.</div>
+            <div className="text-sm">Finalists</div>
           </div>
         </div>
 
         <div className="flex flex-col items-center">
-          <Image src="/images/xp.png" alt="Certification 3" width={200} height={150} className="mb-2" />
+          <Image src="/images/idea.jpeg" alt="Achievement 3" width={200} height={150} className="mb-2" />
           <div className="text-center">
             <div className="font-semibold">Idealize</div>
-            <div className="text-sm">Description or details about the Idealize certification.</div>
+            <div className="text-sm">Participation</div>
           </div>
         </div>
 
         <div className="flex flex-col items-center">
-          <Image src="/images/xp.png" alt="Certification 4" width={200} height={150} className="mb-2" />
+          <Image src="/images/mora.jpeg" alt="Achievement 4" width={200} height={150} className="mb-2" />
           <div className="text-center">
             <div className="font-semibold">Mora UXplore 1.0</div>
-            <div className="text-sm">Description or details about the Mora UXplore 1.0 certification.</div>
+            <div className="text-sm">Participation</div>
           </div>
         </div>
       </div>
@@ -120,12 +130,20 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="items-center gap-8 px-4 py-8 md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/pio1.png" width={400} height={200} />
-        <div className="flex flex-col h-full mt-4 text-left md:mt-0">
-          <h2 className="mb-4 text-4xl font-bold text-white">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a UI UX designer and a frontend web developer. I am very passionate about UI/UX design, which
+      <div className="relative flex flex-col items-start gap-8 px-4 py-8 md:flex-row md:py-16 xl:gap-16 xl:px-16">
+        {/* Static Image */}
+        <div className="relative md:w-1/2">
+          <div className="aspect-w-2 aspect-h-1">
+            <Image src="/images/pio1.png" alt="About Image" layout="responsive" width={800} height={400} />
+          </div>
+        </div>
+        {/* Content Section */}
+        <div className="flex flex-col h-full md:w-1/2">
+          <h2 className="mb-4 text-4xl font-bold text-gradient">
+            About Me
+          </h2>
+          <p className="text-base lg:text-lg text-[#dddedf] ">
+            I am a UI/UX designer and a frontend web developer. I am very passionate about UI/UX design, which
             has led me to work on several projects, like group projects as
             well as individual projects. Through this experience, I was able
             to develop skills in user research, wireframing, and prototyping.
@@ -137,23 +155,26 @@ const AboutSection = () => {
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
+              className="text-xl text-pink-500"
             >
               Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
+              className="text-xl text-pink-500"
             >
               Education
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("achievements")}
+              active={tab === "achievements"}
+              className="text-xl text-pink-500"
             >
-              Certifications
+              Achievements
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className={`mt-8 ${tab === 'achievements' ? 'pb-8' : ''} relative transition-all duration-500`}>
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>

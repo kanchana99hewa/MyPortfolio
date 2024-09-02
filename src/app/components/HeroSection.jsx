@@ -24,7 +24,7 @@ const HeroSection = () => {
               sequence={[
                 "Kanchana",
                 1000,
-                "Web Developer",
+                "Software Engineer",
                 1000,
                 "UI/UX Engineer",
                 1000,
@@ -35,7 +35,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Passionate about designing and enhancing user experiences, I create intuitive and visually compelling interfaces.
+            Passionate about crafting efficient and scalable software solutions, I focus on designing and developing intuitive, user-friendly applications.
           </p>
           
           <div>
@@ -51,13 +51,12 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               download="Kanchana_Hewamadduma_CV.pdf" // This triggers the download
-              className="inline-block w-full px-1 py-1 mt-3 text-black rounded-full sm:w-fit bg-gradient-to-br from-primary-900 to-secondary-500 hover:bg-slate-900"
+              className="inline-block w-full mt-3 text-white border-2 border-white rounded-full sm:w-fit hover:bg-white hover:text-black"
             >
-              <span className="block bg-[#ffffff] hover:bg-slate-800 rounded-full px-5 py-2 font-bold">
+              <span className="block px-5 py-2 font-bold rounded-full">
                 Download CV
               </span>
             </Link>
-            
           </div>
           
         </motion.div>

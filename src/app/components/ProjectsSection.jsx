@@ -78,17 +78,16 @@ const projectsData = [
     previewUrl: "https://www.figma.com/design/I2DK1n2c9c7ZmqdWdNMM5X/FitNourish?node-id=0-1&t=bIXZF6QxY3UWbet9-1",
   },
   {
-    id: 8,
+    id: 9,
     title: "Eventify",
-    description: "A nutritious app tailored for gym enthusiasts",
+    description: "A web app for event management",
     image: "/images/projects/eve.png",
     tag: ["All", "Web"],
     gitUrl: "https://www.figma.com/design/jmIp2dq9jdcXhNumHCTAnE/Eventify?node-id=0-1&t=FKooxCeh7xLLrxJ8-1",
     previewUrl: "https://www.figma.com/design/jmIp2dq9jdcXhNumHCTAnE/Eventify?node-id=0-1&t=FKooxCeh7xLLrxJ8-1",
   },
 ];
-
-const ProjectsSection = () => {
+const ProjectsSection = ({ marginTop }) => { // Accept marginTop as a prop
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -107,10 +106,11 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="mt-4 mb-8 text-4xl font-bold text-center text-white md:mb-12">
+    <section id="projects" style={{ marginTop }} className="transition-all duration-300"> {/* Apply dynamic marginTop */}
+      <h2 className="mt-4 mb-8 text-4xl font-bold text-center text-gradient md:mb-11">
         My Projects
       </h2>
+     
       <div className="flex flex-row items-center justify-center gap-2 py-6 text-white">
         <ProjectTag
           onClick={handleTagChange}
@@ -128,22 +128,26 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
+      <ul
+        ref={ref}
+        className="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
+      >
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
+            className="flex justify-center"
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              className="w-full max-w-sm"
             />
           </motion.li>
         ))}
