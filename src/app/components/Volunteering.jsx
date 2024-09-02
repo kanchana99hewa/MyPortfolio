@@ -6,32 +6,31 @@ const volunteeringData = [
   {
     title: "Volunteer Team Member for ICARC",
     description: "Annual International Conference Organized by FOC, SUSL",
-    imageUrl: "/images/beach-cleanup.jpg", // Replace with your image path
+    imageUrl: "/images/beach-cleanup.jpg", 
   },
   {
     title: "Initiative Group Vice Presidentfor Marketing & Digital Experience",
     description: " AIESEC in SUSL",
-    imageUrl: "/images/tree-planting.jpg", // Replace with your image path
-  },
+    imageUrl: "/images/tree-planting.jpg", 
   {
     title: "Committee member ",
     description: " IEEE WIE Affinity Group",
-    imageUrl: "/images/food-donation.jpg", // Replace with your image path
+    imageUrl: "/images/food-donation.jpg", 
   },
   {
     title: "Member ",
     description: " IEEE Student Branch ",
-    imageUrl: "/images/food-donation.jpg", // Replace with your image path
+    imageUrl: "/images/food-donation.jpg", 
   },
   {
     title: "Member ",
     description: " Society of Computer Sciences  ",
-    imageUrl: "/images/food-donation.jpg", // Replace with your image path
+    imageUrl: "/images/food-donation.jpg",
   },
   {
     title: "Design team  ",
     description: " IEEE WIE Affinity Group  ",
-    imageUrl: "/images/food-donation.jpg", // Replace with your image path
+    imageUrl: "/images/food-donation.jpg", 
   },
 ];
 
