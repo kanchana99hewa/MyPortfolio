@@ -37,12 +37,20 @@ const volunteeringData = [
 
 const Volunteering = () => {
   return (
-    <section className="min-h-screen px-4 py-16 text-gray-900">
+    <section
+      id="Volunteering" 
+      className="min-h-screen px-4 py-16 mt-12 text-gray-900"
+    >
       <div className="container mx-auto">
-        <h1 className="mb-12 text-4xl font-bold text-center text-gradient">My Volunteering Experience</h1>
+        <h1 className="mb-16 text-4xl font-bold text-center text-gradient">
+          My Volunteering Experience
+        </h1>
         <div className="flex flex-wrap justify-center gap-4">
           {volunteeringData.map((volunteer, index) => (
-            <div key={index} className="flex flex-col justify-between bg-purple-300 rounded-lg shadow-lg w-52">
+            <div
+              key={index}
+              className="flex flex-col justify-between bg-purple-300 rounded-lg shadow-lg w-52"
+            >
               <Image
                 src={volunteer.imageUrl}
                 alt={volunteer.title}
@@ -51,8 +59,12 @@ const Volunteering = () => {
                 className="object-contain rounded-t-lg"
               />
               <div className="flex flex-col justify-start p-3 min-h-32">
-                <h2 className="mb-1 text-lg font-semibold text-center">{volunteer.title}</h2>
-                <p className="text-sm text-center text-gray-900">{volunteer.description}</p>
+                <h2 className="mb-1 text-lg font-semibold text-center">
+                  {volunteer.title}
+                </h2>
+                <p className="text-sm text-center text-gray-900">
+                  {volunteer.description}
+                </p>
               </div>
             </div>
           ))}

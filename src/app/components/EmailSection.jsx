@@ -39,25 +39,22 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="relative grid gap-4 py-24 my-12 md:grid-cols-2 md:my-12"
+      className="relative grid gap-4 py-24 -mt-32 md:py-24 md:-mt-24 md:grid-cols-2" // Adjusted negative margin-top
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+      
       <div className="z-10">
-      <h2 className="mb-4 text-4xl font-bold text-gradient">
+      <h2 className="mb-4 text-4xl font-bold text-left text-gradient">
       Lets connect
       </h2>
+
         <p className="text-[#dddedf] mb-4 max-w-md">
-          {" "}
-          I&apos;m actively seeking new opportunities and welcome any 
-          inquiries or greetings. Whether you have a question or just 
-          want to say hello, I&apos;ll
-          try my best to get back to you!
+          I'm actively seeking new opportunities and welcome any inquiries or greetings. Whether you have a question or just want to say hello, I'll try my best to get back to you!
         </p>
         <div className="flex flex-row gap-2 socials">
-          <Link href="github.com">
+          <Link href="https://github.com">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://linkedin.com">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>

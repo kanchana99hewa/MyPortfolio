@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-6 md:flex-row md:items-start md:p-12 md:space-y-0">
         {/* Logo Section */}
         <div className="text-center md:text-left">
-          <span className="text-3xl font-bold">LOGO</span>
+          <span className="text-3xl font-bold">Kanchi</span>
           
         </div>
 
