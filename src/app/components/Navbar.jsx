@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container flex flex-wrap items-center justify-between px-4 py-2 mx-auto lg:py-4">
         <Link
           href={"/"}
-          className="font-semibold text-[#b39db4] text-2xl md:text-5xl" // Changed text color to light purple
+          className="font-semibold text-[#b39db4] text-xl md:text-4xl" // Adjusted text size for Kanchi
         >
           Kanchi
         </Link>
