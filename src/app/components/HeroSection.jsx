@@ -70,7 +70,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#962265] to-[#c24dc2] blur-[100px] rounded-full"></div>
             <div className="relative w-full h-full rounded-full">
               <Image
-                src="/images/propic2.png"
+                src="/images/propic5.png"
                 alt="hero image"
                 className="absolute transform -translate-y-1/2 -translate-x-1/4 top-1/2 left-1/4"
                 width={500}

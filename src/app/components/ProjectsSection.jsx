@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    
     id: 1,
     title: "Interior Design Website",
     description: "UI for company creating creative interior designs",
@@ -16,6 +17,15 @@ const projectsData = [
   },
   {
     id: 2,
+    title: "Coffee-Shop",
+    description: "A web app for Coffee shop",
+    image: "/images/projects/cofee.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/kanchana99hewa/Coffee_Shop",
+    previewUrl: "https://github.com/kanchana99hewa/Coffee_Shop",
+  },
+  {
+    id: 3,
     title: "IT Insights",
     description: "A web platform that connects IT enthusiasts and IT experts",
     image: "/images/projects/IT.png",
@@ -24,7 +34,7 @@ const projectsData = [
     previewUrl: "https://www.figma.com/proto/HXmV7zYCNF9JVO2TjhFtbB/Mini-project?page-id=0%3A47&node-id=139-98&starting-point-node-id=139%3A98&scaling=scale-down-width&content-scaling=fixed&t=nSNqmuAIEjZYZJGq-1",
   },
   {
-    id: 3,
+    id: 4,
     title: "Travel website",
     description: "Travel website for ideas about travel places in Sri Lanka",
     image: "/images/projects/tra.png",
@@ -33,7 +43,7 @@ const projectsData = [
     previewUrl: "https://github.com/username/travel-website",
   },
   {
-    id: 4,
+    id: 5,
     title: "Covid19 APP",
     description: "App designed to help COVID-19 patients in an emergency",
     image: "/images/projects/mob.png",
@@ -42,7 +52,7 @@ const projectsData = [
     previewUrl: "https://www.figma.com/design/WtZWxmPzMaZ0s2zvu5xyJk/Covid19-app?node-id=0-1&t=eeANljnWu6cAqcJx-1",
   },
   {
-    id: 5,
+    id: 6,
     title: "Bookstore",
     description: "A full-stack website for a bookstore",
     image: "/images/projects/book.png",
@@ -51,7 +61,7 @@ const projectsData = [
     previewUrl: "https://github.com/kanchana99hewa/web-frontend",
   },
   {
-    id: 6,
+    id: 7,
     title: "Orchid nursery website",
     description: "A web application for an orchid nursery using Adobe XD",
     image: "/images/projects/orch.png",
@@ -60,7 +70,7 @@ const projectsData = [
     previewUrl: "https://github.com/kanchana99hewa/Orchid-Nursery-website",
   },
   {
-    id: 7,
+    id: 8,
     title: "Chainshelter",
     description: "UI for a blockchain-based password manager",
     image: "/images/projects/chai.png",
@@ -69,7 +79,7 @@ const projectsData = [
     previewUrl: "https://www.figma.com/proto/3aaTfpz6Tx3cSvwgKO0nhN/ChainShelter?page-id=0%3A1&node-id=206-220&starting-point-node-id=16%3A11&scaling=scale-down-width&content-scaling=fixed&t=joGGjFfB7IwVfUha-1",
   },
   {
-    id: 8,
+    id: 9,
     title: "FitNourish",
     description: "A nutritious app tailored for gym enthusiasts",
     image: "/images/projects/nutri.png",
@@ -78,7 +88,7 @@ const projectsData = [
     previewUrl: "https://www.figma.com/design/I2DK1n2c9c7ZmqdWdNMM5X/FitNourish?node-id=0-1&t=bIXZF6QxY3UWbet9-1",
   },
   {
-    id: 9,
+    id: 10,
     title: "Eventify",
     description: "A web app for event management",
     image: "/images/projects/eve.png",
@@ -86,6 +96,7 @@ const projectsData = [
     gitUrl: "https://www.figma.com/design/jmIp2dq9jdcXhNumHCTAnE/Eventify?node-id=0-1&t=FKooxCeh7xLLrxJ8-1",
     previewUrl: "https://www.figma.com/design/jmIp2dq9jdcXhNumHCTAnE/Eventify?node-id=0-1&t=FKooxCeh7xLLrxJ8-1",
   },
+
 ];
 const ProjectsSection = ({ marginTop }) => { // Accept marginTop as a prop
   const [tag, setTag] = useState("All");
