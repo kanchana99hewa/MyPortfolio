@@ -10,6 +10,7 @@ const EmailSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
@@ -17,7 +18,7 @@ const EmailSection = () => {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";  // Points to your API route
+    const endpoint = "/api/send";
 
     const options = {
       method: "POST",
@@ -27,15 +28,19 @@ const EmailSection = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-      e.target.reset();  // Reset the form fields after submission
-    } else {
-      console.error("Error sending message:", resData.error);
+      if (response.status === 200) {
+        console.log("Message sent.");
+        setEmailSubmitted(true);
+        e.target.reset();
+      } else {
+        console.error("Error sending message:", resData.error);
+      }
+    } catch (error) {
+      console.error("Something went wrong:", error);
     }
   };
 
@@ -46,22 +51,29 @@ const EmailSection = () => {
     >
       <div className="z-10">
         <h2 className="mb-4 text-4xl font-bold text-left text-gradient">
-          Let's connect
+          Let&apos;s connect
         </h2>
+
         <p className="text-[#dddedf] mb-4 max-w-md">
-          I'm actively seeking new opportunities and welcome any inquiries or
-          greetings. Whether you have a question or just want to say hello, I'll
-          try my best to get back to you!
+          I&apos;m actively seeking new opportunities and welcome any inquiries
+          or greetings. Whether you have a question or just want to say hello,
+          I&apos;ll try my best to get back to you!
         </p>
+
         <div className="flex flex-row gap-2 socials">
-          <Link href="https://github.com/kanchana99hewa">
+          <Link href="https://github.com/kanchana99hewa" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/kanchana-hewamadduma-160434219">
+
+          <Link
+            href="https://www.linkedin.com/in/kanchana-hewamadduma-160434219"
+            target="_blank"
+          >
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
       </div>
+
       <div>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
@@ -71,6 +83,7 @@ const EmailSection = () => {
             >
               Email
             </label>
+
             <input
               name="email"
               type="email"
@@ -80,6 +93,7 @@ const EmailSection = () => {
               placeholder="kanchana@gmail.com"
             />
           </div>
+
           <div className="mb-6">
             <label
               htmlFor="subject"
@@ -87,6 +101,7 @@ const EmailSection = () => {
             >
               Subject
             </label>
+
             <input
               name="subject"
               type="text"
@@ -96,6 +111,7 @@ const EmailSection = () => {
               placeholder="Type here"
             />
           </div>
+
           <div className="mb-6">
             <label
               htmlFor="message"
@@ -103,20 +119,23 @@ const EmailSection = () => {
             >
               Message
             </label>
+
             <textarea
               name="message"
               id="message"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Let's talk about..."
+              placeholder="Let&apos;s talk about..."
             />
           </div>
+
           <button
             type="submit"
             className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
           >
             Send Message
           </button>
+
           {emailSubmitted && (
             <p className="mt-2 text-sm text-green-500">
               Email sent successfully!
