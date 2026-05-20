@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  output: 'export',
-  basePath: '/MyPortfolio',
-  assetPrefix: '/MyPortfolio/',
+  output: "export",
+
+  basePath: isProd ? "/MyPortfolio" : undefined,
+
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

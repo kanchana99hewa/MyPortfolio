@@ -5,6 +5,13 @@ import TabButton from "./TabButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSchool, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
+// Images (SAFE FOR NEXT.JS + GITHUB PAGES)
+import ProImage from "../../../public/images/pro1.png";
+import CodeImage from "../../../public/images/code.jpeg";
+import PioImage from "../../../public/images/pio.jpeg";
+import IdeaImage from "../../../public/images/idea.jpeg";
+import MoraImage from "../../../public/images/mora.jpeg";
+
 const SKILL_DATA = [
   { name: "HTML", percentage: 90 },
   { name: "CSS", percentage: 85 },
@@ -61,7 +68,9 @@ const TAB_DATA = [
         <div className="flex items-center">
           <FontAwesomeIcon icon={faGraduationCap} className="w-6 h-6 mr-2 text-purple-500" />
           <div>
-            <div className="font-semibold">BSc. Honours Degree in Computing and Information Systems</div>
+            <div className="font-semibold">
+              BSc. Honours Degree in Computing and Information Systems
+            </div>
             <div className="text-sm">Sabaragamuwa University of Sri Lanka</div>
           </div>
         </div>
@@ -69,7 +78,9 @@ const TAB_DATA = [
         <div className="flex items-center">
           <FontAwesomeIcon icon={faSchool} className="w-6 h-6 mr-2 text-purple-500" />
           <div>
-            <div className="font-semibold">SITEC (Southern Information Technology Education Center)</div>
+            <div className="font-semibold">
+              SITEC (Southern Information Technology Education Center)
+            </div>
             <div className="text-sm">Completed 4 months course in Python</div>
           </div>
         </div>
@@ -83,8 +94,8 @@ const TAB_DATA = [
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
         <div className="flex flex-col items-center">
           <Image
-            src="/images/code.jpeg"
-            alt="Achievement 1"
+            src={CodeImage}
+            alt="Code With WIE"
             width={200}
             height={150}
             className="mb-2"
@@ -97,8 +108,8 @@ const TAB_DATA = [
 
         <div className="flex flex-col items-center">
           <Image
-            src="/images/pio.jpeg"
-            alt="Achievement 2"
+            src={PioImage}
+            alt="Pioneers"
             width={200}
             height={150}
             className="mb-2"
@@ -111,8 +122,8 @@ const TAB_DATA = [
 
         <div className="flex flex-col items-center">
           <Image
-            src="/images/idea.jpeg"
-            alt="Achievement 3"
+            src={IdeaImage}
+            alt="Idealize"
             width={200}
             height={150}
             className="mb-2"
@@ -125,8 +136,8 @@ const TAB_DATA = [
 
         <div className="flex flex-col items-center">
           <Image
-            src="/images/mora.jpeg"
-            alt="Achievement 4"
+            src={MoraImage}
+            alt="Mora UXplore"
             width={200}
             height={150}
             className="mb-2"
@@ -154,29 +165,38 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="relative flex flex-col items-start gap-8 px-4 py-8 md:flex-row md:py-16 xl:gap-16 xl:px-16">
-        {/* Static Image */}
+
+        {/* Image */}
         <div className="relative md:w-1/2">
-          <div className="aspect-w-2 aspect-h-1">
-            <Image src="/images/pro1.png" alt="About Image" layout="responsive" width={600} height={300} />
-          </div>
+          <Image
+            src={ProImage}
+            alt="About Image"
+            width={600}
+            height={300}
+            className="rounded-lg"
+          />
         </div>
-        {/* Content Section */}
+
+        {/* Content */}
         <div className="flex flex-col h-full md:w-1/2">
           <h2 className="mb-4 text-4xl font-bold text-gradient">About Me</h2>
+
           <p className="text-base lg:text-lg text-[#dddedf]">
-            I am a UI/UX designer and a frontend web developer. I am very passionate about UI/UX design, which
-            has led me to work on several projects, like group projects as
-            well as individual projects. Through this experience, I was able
-            to develop skills in user research, wireframing, and prototyping.
-            I am proficient with tools like Figma, Adobe XD, and Sketch, and
-            I have a good understanding of front-end development, including
-            HTML, CSS, JavaScript, ReactJs, NextJs.
+            I am a UI/UX designer and a frontend web developer. I am very
+            passionate about UI/UX design, which has led me to work on several
+            projects, like group projects as well as individual projects.
+            Through this experience, I was able to develop skills in user
+            research, wireframing, and prototyping. I am proficient with tools
+            like Figma, Adobe XD, and Sketch, and I have a good understanding
+            of front-end development including HTML, CSS, JavaScript, ReactJs,
+            NextJs.
           </p>
+
+          {/* Tabs */}
           <div className="flex flex-row justify-start mt-8 space-x-4">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
-              style={{ fontSize: "24px", color: tab === "skills" ? "pink" : "gray" }}
             >
               Skills
             </TabButton>
@@ -184,7 +204,6 @@ const AboutSection = () => {
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
-              style={{ fontSize: "24px", color: tab === "education" ? "pink" : "gray" }}
             >
               Education
             </TabButton>
@@ -192,13 +211,17 @@ const AboutSection = () => {
             <TabButton
               selectTab={() => handleTabChange("achievements")}
               active={tab === "achievements"}
-              style={{ fontSize: "24px", color: tab === "achievements" ? "pink" : "gray" }}
             >
               Achievements
             </TabButton>
           </div>
 
-          <div className={`mt-8 ${tab === "achievements" ? "pb-8" : ""} relative transition-all duration-500`}>
+          {/* Tab Content */}
+          <div
+            className={`mt-8 relative transition-all duration-500 ${
+              tab === "achievements" ? "pb-8" : ""
+            }`}
+          >
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
